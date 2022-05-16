@@ -183,11 +183,8 @@ def main(argv=None):
 
         if not url_list:
             continue
-
-        url_str = url_list[0]
-
-        for url in url_list[1:]:
-            url_str += ',' + url
+        
+        url_str = ','.join(url_list)
 
         fic.get_fic_with_list(url_str)
 
